@@ -8,20 +8,18 @@
  *
  * @author CHANGE_THIS_TO_YOUR_NAME
  */
-public class Sundae{
-    
+public class Sundae extends IceCream {
 
-    
-    public Sundae(String icName, int icCost, String toppingName, int toppingCost)
-    {
-       
-    }
-    
+    private int topCost;
+    private String topName;
 
-    
-    public String toString()
-    {
-        
+    public Sundae(String icName, int icCost, String toppingName, int toppingCost) {
+        super(icName, icCost);
+        this.topName = toppingName;
+        this.topCost = toppingCost;
     }
-    
+
+    @Override
+    public String toString() {
+    }
 }
