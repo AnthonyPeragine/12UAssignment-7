@@ -10,10 +10,12 @@
  */
 public class IceCream extends DessertItem {
 
+    //required instance variable
     private int cost;
     
     public IceCream(String name, int cost)
     {
+        //creates the ice cream
         super(name);
         this.cost = cost;
         
@@ -22,6 +24,7 @@ public class IceCream extends DessertItem {
   
     public String toString()
     {
+        //formats the string with the correct number of spaces
      String s = "";
      s += super.getName();
      String cost = DessertShoppe.cents2dollarsAndCents(getCost());
@@ -35,6 +38,7 @@ public class IceCream extends DessertItem {
 
     @Override
     public int getCost() {
+        //gets the cost of the ice cream
         return this.cost;
     }
     

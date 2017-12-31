@@ -10,16 +10,27 @@
  */
 public class Sundae extends IceCream {
 
+    //required instance variables
     private int topCost;
     private String topName;
 
     public Sundae(String icName, int icCost, String toppingName, int toppingCost) {
-        super(icName, icCost);
+        //creates the sundae using the name and cost from the ice cream class
+        super(icName, icCost + toppingCost);
         this.topName = toppingName;
-        this.topCost = toppingCost;
     }
 
     @Override
     public String toString() {
+        //formats the string with the correct amount of spaces
+        String s = "";
+        s += topName + " Sundae with\n";
+        s += super.getName();
+        String cost = DessertShoppe.cents2dollarsAndCents(getCost());
+        for (int i = 0; i < DessertShoppe.RECEIPT_WIDTH - (cost.length() + super.getName().length()); i++) {
+            s += " ";
+        }
+        s += cost;
+        return s;
     }
 }

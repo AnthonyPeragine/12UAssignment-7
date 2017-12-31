@@ -10,6 +10,7 @@
  */
 public class Candy extends DessertItem {
 
+    //required instance variables
     private double weight;
     private int pricePerLbs;
 
@@ -22,6 +23,7 @@ public class Candy extends DessertItem {
 
     @Override
     public String toString() {
+        //formats the string with the correct amount of spaces 
         String s = "";
         s += this.weight + " lbs.";
         s += " @ $" + DessertShoppe.cents2dollarsAndCents(this.pricePerLbs) + " /lb.";
@@ -35,6 +37,7 @@ public class Candy extends DessertItem {
     }
 
     @Override
+    //gets the cost of the candy
     public int getCost() {
         
         double cost = this.weight * this.pricePerLbs;
